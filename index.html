@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet House</title>
+
+    <!-- DaisyUi & Tailwind CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awsome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-adlam {
+        font-family: "ADLaM Display", serif;
+      }
+      .font-sora {
+        font-family: "Sora", serif;
+      }
+    </style>
+  </head>
+  <body class="">
+    <!-- Head Section  -->
+    <header class="container mx-auto mb-[100px]">
+      <!-- Navber Started -->
+      <nav class="border-b-2 border-gray-400 lg:border-b-0">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="flex">
+              <img src="image/logo-header.png" alt="" />
+              <a class="btn btn-ghost text-xl font-adlam hidden lg:flex"
+                >Pets <span class="text-[#FFDC26]">House</span></a
+              >
+            </div>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 font-sora">
+              <li><a>Find a pet</a></li>
+              <li><a>Breeds</a></li>
+              <li><a>Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="navbar-end space-x-3 hidden lg:flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_1_27)">
+                <path
+                  d="M22.555 13.662L20.655 6.826C20.0981 4.82333 18.8877 3.06429 17.2163 1.82847C15.5449 0.592652 13.5084 -0.0490142 11.4304 0.00546594C9.3525 0.0599461 7.35239 0.807446 5.74805 2.12915C4.1437 3.45085 3.02719 5.2709 2.57598 7.3L1.10498 13.915C0.942497 14.6459 0.946254 15.404 1.11597 16.1333C1.2857 16.8626 1.61705 17.5445 2.08556 18.1286C2.55408 18.7126 3.1478 19.184 3.82289 19.508C4.49798 19.8319 5.23721 20 5.98598 20H7.09998C7.3295 21.1303 7.94271 22.1465 8.83572 22.8764C9.72874 23.6063 10.8466 24.005 12 24.005C13.1533 24.005 14.2712 23.6063 15.1642 22.8764C16.0573 22.1465 16.6705 21.1303 16.9 20H17.738C18.5088 20.0001 19.2692 19.8219 19.9597 19.4794C20.6503 19.137 21.2523 18.6395 21.7188 18.0259C22.1853 17.4122 22.5036 16.699 22.6488 15.942C22.794 15.185 22.7612 14.4047 22.555 13.662ZM12 22C11.3817 21.9974 10.7794 21.8039 10.2753 21.4459C9.77121 21.0879 9.39007 20.5829 9.18398 20H14.816C14.6099 20.5829 14.2288 21.0879 13.7247 21.4459C13.2206 21.8039 12.6182 21.9974 12 22ZM20.126 16.815C19.8473 17.1847 19.4863 17.4843 19.0716 17.69C18.6569 17.8957 18.1999 18.0018 17.737 18H5.98598C5.53677 17.9999 5.0933 17.899 4.68832 17.7046C4.28334 17.5102 3.92719 17.2273 3.64614 16.8769C3.3651 16.5265 3.16634 16.1174 3.06454 15.6798C2.96274 15.2423 2.9605 14.7875 3.05798 14.349L4.52798 7.733C4.88233 6.13921 5.75929 4.7096 7.01944 3.67145C8.27959 2.63329 9.85061 2.04617 11.4828 2.00341C13.1149 1.96066 14.7145 2.46472 16.0273 3.43547C17.3401 4.40622 18.2907 5.78795 18.728 7.361L20.628 14.197C20.7535 14.6424 20.7735 15.1109 20.6864 15.5653C20.5992 16.0198 20.4074 16.4477 20.126 16.815Z"
+                  fill="#111111"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_27">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_1_29)">
+                <path
+                  d="M23.707 22.293L17.738 16.324C19.3647 14.3346 20.1644 11.7961 19.9719 9.23356C19.7793 6.67103 18.6092 4.28053 16.7036 2.55652C14.798 0.83251 12.3026 -0.0931084 9.73367 -0.0288765C7.16472 0.0353553 4.71873 1.08452 2.90164 2.90161C1.08455 4.7187 0.035382 7.16469 -0.0288498 9.73364C-0.0930816 12.3026 0.832537 14.798 2.55655 16.7036C4.28056 18.6092 6.67106 19.7793 9.23359 19.9718C11.7961 20.1644 14.3346 19.3646 16.324 17.738L22.293 23.707C22.4816 23.8892 22.7342 23.99 22.9964 23.9877C23.2586 23.9854 23.5094 23.8802 23.6948 23.6948C23.8803 23.5094 23.9854 23.2586 23.9877 22.9964C23.99 22.7342 23.8892 22.4816 23.707 22.293ZM10 18C8.41778 18 6.87106 17.5308 5.55546 16.6518C4.23987 15.7727 3.21449 14.5233 2.60899 13.0615C2.00349 11.5997 1.84506 9.99113 2.15374 8.43928C2.46243 6.88743 3.22435 5.46197 4.34317 4.34315C5.46199 3.22433 6.88746 2.4624 8.4393 2.15372C9.99115 1.84504 11.5997 2.00346 13.0615 2.60896C14.5233 3.21446 15.7727 4.23984 16.6518 5.55544C17.5308 6.87103 18 8.41775 18 10C17.9976 12.121 17.154 14.1544 15.6543 15.6542C14.1545 17.154 12.121 17.9976 10 18Z"
+                  fill="black"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_29">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <a
+              class="btn px-[10px] w-[117px] font-sora text-5 border-1 bg-white border-[#FFDC26]"
+              >Login</a
+            >
+            <a class="btn px-[10px] w-[117px] font-sora text-5 bg-[#FFDC26]"
+              >Register</a
+            >
+          </div>
+
+          <div class="ml-[200px] lg:hidden">
+            <i class="fa-solid fa-bars text-[25px]"></i>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section started -->
+      <section
+        class="lg:mt-[114px] h-screen bg-no-repeat bg-center lg:bg-[url('image/cat-big.png')] relative"
+      >
+        <div class="w-full max-w-[681px] space-y-[20px]">
+          <h1 class="text-[56px] font-adlam w-full">
+            Pamper Your Pet, Because They Deserve the Bes
+          </h1>
+          <p class="font-sora w-full text-[20px]">
+            Discover a world of treats, toys, and essentials handpicked for your
+            furry friends. Shop now and make tails wag with joy!
+          </p>
+          <button class="btn px-[10px] w-[117px] font-sora text-5 bg-[#FFDC26]">
+            <span class="relative flex size-3">
+              <span
+                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex size-3 rounded-full bg-red-500"
+              ></span>
+            </span>
+            Find a pet
+          </button>
+          <img class="lg:hidden" src="image/cat-big.png" alt="" />
+        </div>
+      </section>
+    </header>
+
+    <!-- Main Section -->
+    <main class="">
+      <!-- Catagory Section start -->
+      <section class="mb-[130px] container mx-auto">
+        <h1 class="font-adlam text-[36px] mb-[48px]">Browse By Categories</h1>
+        <div class="grid lg:grid-cols-6 grid-cols-2 justify-items-center gap-4">
+          <div
+            class="w-[200px] bg-[#F9DF8A] py-[30px] px-[45px] rounded-[12px]"
+          >
+            <div
+              class="w-[104px] rounded-full bg-white flex justify-center p-[28px]"
+            >
+              <img class="w-[48px]" src="image/dog-cartoon.png" alt="" />
+            </div>
+            <div class="text-center mt-[24px] space-y-[12px]">
+              <h4 class="font-adlam text-[20px]">Dog</h4>
+              <p class="font-sora">3 items</p>
+            </div>
+          </div>
+          <div
+            class="w-[200px] bg-[#F9DF8A] py-[30px] px-[45px] rounded-[12px]"
+          >
+            <div
+              class="w-[104px] rounded-full bg-white flex justify-center p-[28px]"
+            >
+              <img class="w-[48px]" src="image/fish-cartoon.png" alt="" />
+            </div>
+            <div class="text-center mt-[24px] space-y-[12px]">
+              <h4 class="font-adlam text-[20px]">Fish</h4>
+              <p class="font-sora">3 items</p>
+            </div>
+          </div>
+          <div
+            class="w-[200px] bg-[#F9DF8A] py-[30px] px-[45px] rounded-[12px]"
+          >
+            <div
+              class="w-[104px] rounded-full bg-white flex justify-center p-[28px]"
+            >
+              <img class="w-[48px]" src="image/cat-cartoon.png" alt="" />
+            </div>
+            <div class="text-center mt-[24px] space-y-[12px]">
+              <h4 class="font-adlam text-[20px]">Cat</h4>
+              <p class="font-sora">3 items</p>
+            </div>
+          </div>
+          <div
+            class="w-[200px] bg-[#F9DF8A] py-[30px] px-[45px] rounded-[12px]"
+          >
+            <div
+              class="w-[104px] rounded-full bg-white flex justify-center p-[28px]"
+            >
+              <img class="w-[48px]" src="image/bird-cartoon.png" alt="" />
+            </div>
+            <div class="text-center mt-[24px] space-y-[12px]">
+              <h4 class="font-adlam text-[20px]">Bird</h4>
+              <p class="font-sora">3 items</p>
+            </div>
+          </div>
+          <div
+            class="w-[200px] bg-[#F9DF8A] py-[30px] px-[45px] rounded-[12px]"
+          >
+            <div
+              class="w-[104px] rounded-full bg-white flex justify-center p-[28px]"
+            >
+              <img class="w-[48px]" src="image/mouse-cartoon.png" alt="" />
+            </div>
+            <div class="text-center mt-[24px] space-y-[12px]">
+              <h4 class="font-adlam text-[20px]">Small Pet</h4>
+              <p class="font-sora">3 items</p>
+            </div>
+          </div>
+          <div
+            class="w-[200px] bg-[#F9DF8A] py-[30px] px-[45px] rounded-[12px]"
+          >
+            <div
+              class="w-[104px] rounded-full bg-white flex justify-center p-[28px]"
+            >
+              <img class="w-[48px]" src="image/rabbit-cartoon.png" alt="" />
+            </div>
+            <div class="text-center mt-[24px] space-y-[12px]">
+              <h4 class="font-adlam text-[20px]">Rabbit</h4>
+              <p class="font-sora">3 items</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trending Section -->
+
+      <section class="mb-[130px] container mx-auto">
+        <h1 class="font-adlam text-[36px] mb-[48px]">Trending Pet Products</h1>
+        <div class="lg:flex items-center gap-6">
+          <div
+            class="w-[350px] bg-[#F9DF8A] rounded-[10px] pb-[100px] relative mx-auto mb-5 lg:mb-0"
+          >
+            <div class="p-[30px] space-y-4 w-[310px]">
+              <h1 class="text-[32px] font-adlam">T-Shirt For Dogs</h1>
+              <p class="">
+                Are you looking for a 20-line description for a dog T-shirt,Let
+                me know so I can help you better!
+              </p>
+              <button class="btn px-[30px] py-[10px] bg-white font-sora">
+                Shop Now
+              </button>
+            </div>
+            <div class="w-[130px] absolute left-[50%] top-[50%]">
+              <img class="w-full" src="image/cute-pet-mid.png" alt="" />
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-3 grid-cols-2 gap-2 lg:w-[872px]">
+            <!-- mini card start -->
+            <div class="w-[275px] border-2 border-[rgba(17,17,17,0.1)]">
+              <div class="w-[180px] flex justify-center items-center">
+                <div class="w-full max-w-85px bg-white p-[30px]">
+                  <img class="w-full" src="image/dog-cartoon.png" alt="" />
+                </div>
+
+                <div class="w-full max-w-[85px]">
+                  <div class="w-full">
+                    <i
+                      class="fa-solid fa-star fa-sm"
+                      style="color: #ffd43b"
+                    ></i>
+                    <span class="font-sora">4.5</span>
+                    <h6 class="font-adlam">Pet Bed</h6>
+                    <h6 class="font-adlam">$39.99</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-[275px] border-2 border-[rgba(17,17,17,0.1)]">
+              <div class="w-[180px] flex justify-center items-center">
+                <div class="w-full max-w-85px bg-white p-[30px]">
+                  <img class="w-full" src="image/fish-cartoon.png" alt="" />
+                </div>
+
+                <div class="w-full max-w-[85px]">
+                  <div class="w-full">
+                    <i
+                      class="fa-solid fa-star fa-sm"
+                      style="color: #ffd43b"
+                    ></i>
+                    <span class="font-sora">4.5</span>
+                    <h6 class="font-adlam">Fish Bed</h6>
+                    <h6 class="font-adlam">$39.99</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-[275px] border-2 border-[rgba(17,17,17,0.1)]">
+              <div class="w-[180px] flex justify-center items-center">
+                <div class="w-full max-w-85px bg-white p-[30px]">
+                  <img class="w-full" src="image/bird-cartoon.png" alt="" />
+                </div>
+
+                <div class="w-full max-w-[85px]">
+                  <div class="w-full">
+                    <i
+                      class="fa-solid fa-star fa-sm"
+                      style="color: #ffd43b"
+                    ></i>
+                    <span class="font-sora">4.5</span>
+                    <h6 class="font-adlam">Pet Bed</h6>
+                    <h6 class="font-adlam">$39.99</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-[275px] border-2 border-[rgba(17,17,17,0.1)]">
+              <div class="w-[180px] flex justify-center items-center">
+                <div class="w-full max-w-85px bg-white p-[30px]">
+                  <img class="w-full" src="image/rabbit-cartoon.png" alt="" />
+                </div>
+
+                <div class="w-full max-w-[85px]">
+                  <div class="w-full">
+                    <i
+                      class="fa-solid fa-star fa-sm"
+                      style="color: #ffd43b"
+                    ></i>
+                    <span class="font-sora">4.5</span>
+                    <h6 class="">Pet Bed</h6>
+                    <h6 class="font-adlam">$39.99</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-[275px] border-2 border-[rgba(17,17,17,0.1)]">
+              <div class="w-[180px] flex justify-center items-center">
+                <div class="w-full max-w-85px bg-white p-[30px]">
+                  <img class="w-full" src="image/bird-cartoon.png" alt="" />
+                </div>
+
+                <div class="w-full max-w-[85px]">
+                  <div class="w-full">
+                    <i
+                      class="fa-solid fa-star fa-sm"
+                      style="color: #ffd43b"
+                    ></i>
+                    <span class="font-sora">4.5</span>
+                    <h6 class="font-adlam">Bird Bed</h6>
+                    <h6 class="font-adlam">$39.99</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-[275px] border-2 border-[rgba(17,17,17,0.1)]">
+              <div class="w-[180px] flex justify-center items-center">
+                <div class="w-full max-w-85px bg-white p-[30px]">
+                  <img class="w-full" src="image/pet-couch.png" alt="" />
+                </div>
+
+                <div class="w-full max-w-[85px]">
+                  <div class="w-full">
+                    <i
+                      class="fa-solid fa-star fa-sm"
+                      style="color: #ffd43b"
+                    ></i>
+                    <span class="font-sora">4.5</span>
+                    <h6 class="font-adlam">Pet Bed</h6>
+                    <h6 class="font-adlam">$39.99</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-[275px] border-2 border-[rgba(17,17,17,0.1)]">
+              <div class="w-[180px] flex justify-center items-center">
+                <div class="w-full max-w-85px bg-white p-[30px]">
+                  <img class="w-full" src="image/fish-cartoon.png" alt="" />
+                </div>
+
+                <div class="w-full max-w-[85px]">
+                  <div class="w-full">
+                    <i
+                      class="fa-solid fa-star fa-sm"
+                      style="color: #ffd43b"
+                    ></i>
+                    <span class="font-sora">4.5</span>
+                    <h6 class="font-adlam">Fish Bed</h6>
+                    <h6 class="font-adlam">$39.99</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-[275px] border-2 border-[rgba(17,17,17,0.1)]">
+              <div class="w-[180px] flex justify-center items-center">
+                <div class="w-full max-w-85px bg-white p-[30px]">
+                  <img class="w-full" src="image/pet-couch.png" alt="" />
+                </div>
+
+                <div class="w-full max-w-[85px]">
+                  <div class="w-full">
+                    <i
+                      class="fa-solid fa-star fa-sm"
+                      style="color: #ffd43b"
+                    ></i>
+                    <span class="font-sora">4.5</span>
+                    <h6 class="font-adlam">Pet Bed</h6>
+                    <h6 class="font-adlam">$39.99</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-[275px] border-2 border-[rgba(17,17,17,0.1)] hidden lg:inline"
+            >
+              <div class="w-[180px] flex justify-center items-center">
+                <div class="w-full max-w-85px bg-white p-[30px]">
+                  <img class="w-full" src="image/rabbit-cartoon.png" alt="" />
+                </div>
+
+                <div class="w-full max-w-[85px]">
+                  <div class="w-full">
+                    <i
+                      class="fa-solid fa-star fa-sm"
+                      style="color: #ffd43b"
+                    ></i>
+                    <span class="font-sora">4.5</span>
+                    <h6 class="font-adlam">Pet Bed</h6>
+                    <h6 class="font-adlam">$39.99</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Every Day Low Price -->
+
+      <section class="mb-[200px] container mx-auto">
+        <div class="lg:flex">
+          <div
+            class="bg-gradient-to-r from-[#F8CCFB] to-[#ACD2FD] lg:w-3/5 w-[350px] mx-auto lg:flex justify-between items-center lg:pl-[30px] mb-4 lg:mb-0 rounded-[12px]"
+          >
+            <div
+              class="lg:w-[286px] mx-auto leading-none lg:leading-normal pt-[25px] pl-[10px] lg:pt-0"
+            >
+              <h6 class="font-sora text-5 text-[#000000] hidden lg:inline">
+                Under Price
+              </h6>
+              <h3 class="text-[24px] font-adlam font-extrabold text-[#000000]">
+                Pet Grooming Mitt
+              </h3>
+              <h5 class="font-adlam text-white hidden lg:inline">
+                (Easy Hair Removal)
+              </h5>
+              <h1 class="font-adlam text-[48px] text-white lg:text-black">
+                $7.99
+              </h1>
+            </div>
+            <div
+              class="w-full max-w-[250px] ml-[125px] lg:max-w-[382px] lg:mx-auto"
+            >
+              <img class="w-full" src="image/cute-dog-mid.png" alt="" />
+            </div>
+          </div>
+          <div
+            class="lg:w-2/5 w-[350px] mx-auto bg-gradient-to-r from-[#FFF9F4] to-[#F9DF8A] rounded-[10px] lg:pb-[100px] pb-[250px] lg:relative relative"
+          >
+            <div
+              class="lg:p-[30px] p-[15px] lg:w-[310px] leading-none lg:leading-normal"
+            >
+              <h1 class="text-[32px] font-adlam">T-Shirt For Dogs</h1>
+              <h1 class="font-adlam text-yellow-400 text-[48px]">$7.99</h1>
+            </div>
+            <div
+              class="w-[180px] lg:w-[300px] lg:absolute lg:left-[30%] lg:-top-[-15%] absolute top-[30%] left-[40%]"
+            >
+              <img class="lg:w-full" src="image/cute-pet-mid.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative">
+        <div
+          class="lg:flex lg:justify-center lg:gap-[117px] lg:pt-7 bg-[#FFF9F4] border-2 border-gray-200 rounded-[16px] container mx-auto absolute lg:left-[75px] lg:-top-32 left-[23px] -top-[145px] text-center lg:text-left mx-auto lg:w-[1320px] w-[360px]"
+        >
+          <div class="w-[200px] mx-auto lg:w-[350px]">
+            <img class="w-full" src="image/cute-pet-mid.png" alt="" />
+          </div>
+          <div class="lg:pt-10">
+            <h1 class="text-[36px] font-adlam">Get Pawsome News!</h1>
+            <p class="font-sora text-5">
+              Exclusive training tips, ticks, product deals and more.
+            </p>
+            <input
+              class="lg:my-[38px] w-[330px] lg:w-[472px] h-[67px] bg-white"
+              placeholder="Enter email...."
+              type="text"
+            />
+            <br />
+            <button
+              class="btn px-[10px] w-[117px] font-sora text-5 bg-[#FFDC26]"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+        <div class="bg-[rgba(255,220,38,0.5)]">
+          <div
+            class="lg:flex justify-around items-center container mx-auto lg:pt-[500px] pt-[400px] pb-[100px] ml-5 lg:ml-0 lg:pb-[125px]"
+          >
+            <div class="w-[300px]">
+              <img class="w-full" src="image/Group 32.png" alt="" />
+            </div>
+            <div>
+              <ul
+                class="font-sora mt-5 lg:mt-0 text-5 lg:space-y-[20px] space-y-2"
+              >
+                <li><a href="#">Find a pet</a></li>
+                <li><a href="#">Breeds</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            </div>
+            <div class="pt-10 space-x-2">
+              <h4>Follow Us</h4>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-square-instagram"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+  </body>
+</html>
